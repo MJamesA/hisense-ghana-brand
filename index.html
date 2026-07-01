@@ -251,6 +251,67 @@ body{font-family:'Poppins',Arial,sans-serif;background:#ededeb;color:var(--ink);
 .env-rbar{width:100%;height:1.5px;margin-top:4px;opacity:0.5;background:var(--accent);}
 .env-corner{position:absolute;bottom:0;left:9mm;width:26mm;height:2px;z-index:4;}
 
+/* ── INVOICE ── */
+.inv-page{width:210mm;flex-shrink:0;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,0.06),0 8px 32px rgba(0,0,0,0.1);border-radius:4px;overflow:hidden;}
+.inv-header{background:var(--ink);position:relative;}
+.inv-header-bar{height:4px;}
+.inv-header-top{display:flex;align-items:center;justify-content:space-between;padding:20px 36px 14px;gap:16px;flex-wrap:wrap;}
+.inv-header-right{text-align:right;}
+.inv-title-badge{display:inline-block;padding:6px 18px;border:2px solid var(--accent);color:var(--accent);font-family:'Poppins',sans-serif;font-size:14px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;border-radius:3px;}
+.inv-title-sub{font-size:9px;letter-spacing:0.1em;margin-top:6px;font-weight:500;color:var(--accent);}
+.inv-meta-row{display:flex;gap:0;padding:12px 36px 16px;border-top:1px solid rgba(255,255,255,0.06);flex-wrap:wrap;}
+.inv-meta-item{flex:1;min-width:90px;}
+.inv-meta-label{font-size:8px;color:#8a929b;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;margin-bottom:2px;}
+.inv-meta-value{font-size:12px;color:#fff;font-weight:500;}
+.inv-body{padding:26px 36px 20px;}
+.inv-parties{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:22px;}
+.inv-party{font-size:10.5px;color:#3f3c39;line-height:1.85;}
+.inv-party p{margin:0;}
+.inv-party .pname{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.inv-party-label{display:inline-block;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:3px 10px;border-left:3px solid var(--accent);color:var(--accent);margin-bottom:8px;}
+.inv-table-actions{margin-bottom:12px;display:flex;align-items:center;gap:12px;}
+.btn-row{padding:7px 16px;border-radius:6px;font-family:'Poppins',sans-serif;font-size:11px;font-weight:600;cursor:pointer;border:none;transition:all 0.2s ease;letter-spacing:0.04em;}
+.btn-row-add{background:#d8f3f1;color:var(--accent);}
+.btn-row-add:hover{filter:brightness(0.97);transform:translateY(-1px);}
+.inv-table{width:100%;border-collapse:separate;border-spacing:0;font-size:11px;border-radius:6px;overflow:hidden;border:1px solid #e8e7e3;}
+.inv-table th{padding:10px 12px;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;text-align:left;background:var(--accent);}
+.inv-table td{padding:10px 12px;border-bottom:1px solid #f0f0ec;color:#3f3c39;vertical-align:middle;}
+.inv-table tbody tr:nth-child(even){background:#fafaf8;}
+.inv-table tbody tr:hover{background:#eefaf9;}
+.td-center{text-align:center;}
+.td-num{text-align:right;font-variant-numeric:tabular-nums;}
+.inv-table td[contenteditable]{background:rgba(1,179,171,0.04);border-bottom:1px dashed #d8d8d0;outline:none;}
+.inv-table td[contenteditable]:hover{background:rgba(1,179,171,0.09);}
+.inv-table td[contenteditable]:focus{background:rgba(1,179,171,0.13);border-bottom:1px solid var(--accent);}
+.row-del{text-align:center;color:#c0392b;cursor:pointer;font-size:16px;font-weight:700;width:28px;opacity:0.35;transition:all 0.2s ease;border-radius:4px;}
+.row-del:hover{opacity:1;background:rgba(192,57,43,0.08);}
+.inv-totals{display:flex;justify-content:flex-end;margin:22px 0;}
+.inv-totals-box{min-width:280px;background:var(--offwhite);border-radius:8px;padding:16px 20px;border:1px solid #e8e7e3;}
+.inv-totals-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:12px;color:#3f3c39;}
+.inv-totals-row.subtotal{padding-bottom:12px;border-bottom:1px solid #e0dfdb;}
+.inv-totals-row.vat{font-size:11px;color:var(--slate);}
+.inv-totals-row.grand{border-top:2px solid var(--accent);padding-top:14px;margin-top:8px;font-size:16px;font-weight:800;color:var(--ink);}
+.tlabel{font-weight:600;letter-spacing:0.04em;}
+.tval{font-weight:700;font-variant-numeric:tabular-nums;}
+.inv-totals-row.grand .tval{color:var(--accent);}
+.inv-bottom-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px;padding-top:22px;border-top:1px solid #efefef;}
+.inv-payment,.inv-terms{font-size:10px;color:#3f3c39;line-height:1.85;}
+.inv-payment p,.inv-terms p{margin:2px 0;}
+.inv-section-label{display:inline-block;padding:4px 12px;border-radius:4px;font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;margin-bottom:12px;background:var(--accent);}
+.inv-terms-toggle{display:flex;align-items:center;gap:6px;cursor:pointer;user-select:none;margin-bottom:8px;}
+.inv-terms-arrow{font-size:10px;color:var(--accent);transition:transform 0.25s ease;display:inline-block;}
+.inv-terms-arrow.collapsed{transform:rotate(-90deg);}
+.inv-terms-body{overflow:hidden;transition:max-height 0.3s ease,opacity 0.3s ease;max-height:320px;opacity:1;}
+.inv-terms-body.collapsed{max-height:0;opacity:0;}
+.inv-sig{margin-top:24px;padding-top:20px;border-top:1px solid #efefef;}
+.inv-sig-box{max-width:280px;}
+.inv-sig-line{height:1px;background:var(--ink);margin-bottom:10px;opacity:0.4;}
+.inv-sig-name{font-size:14px;font-weight:700;color:var(--ink);}
+.inv-sig-title{font-size:10px;color:var(--slate);letter-spacing:0.04em;margin-top:2px;}
+.inv-footer{background:var(--ink);padding:14px 36px;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;}
+.inv-footer p{font-size:8px;color:#8a929b;line-height:1.7;margin:0;}
+.inv-footer-dot{width:4px;height:4px;border-radius:50%;background:var(--accent);}
+
 /* ── PRINT (single stationery piece) ── */
 @media print{
   @page{margin:8mm;}
@@ -258,7 +319,7 @@ body{font-family:'Poppins',Arial,sans-serif;background:#ededeb;color:var(--ink);
   body.printing *{visibility:hidden!important;box-shadow:none!important;}
   body.printing .print-target,body.printing .print-target *{visibility:visible!important;}
   body.printing .print-target{position:absolute;left:0;top:0;margin:0;}
-  body.printing .lh-page,body.printing .env,body.printing .bc-card{border-radius:0!important;}
+  body.printing .lh-page,body.printing .env,body.printing .bc-card,body.printing .inv-page{border-radius:0!important;}
 }
 
 /* ── RESPONSIVE ── */
@@ -301,6 +362,7 @@ body{font-family:'Poppins',Arial,sans-serif;background:#ededeb;color:var(--ink);
   <button class="top-nav-btn" data-target="sec-type">Typography</button>
   <button class="top-nav-btn" data-target="sec-usage">Usage</button>
   <button class="top-nav-btn" data-target="sec-stationery">Stationery</button>
+  <button class="top-nav-btn" data-target="sec-invoice">Invoice</button>
   <button class="top-nav-btn" data-target="sec-downloads">Downloads</button>
 </nav>
 
@@ -745,9 +807,139 @@ body{font-family:'Poppins',Arial,sans-serif;background:#ededeb;color:var(--ink);
 
 <div class="ba-divider"></div>
 
-<!-- ═══════════ SECTION 07 · DOWNLOADS ═══════════ -->
-<section class="ba-section" id="sec-downloads">
+<!-- ═══════════ SECTION 07 · INVOICE ═══════════ -->
+<section class="ba-section" id="sec-invoice">
   <div class="ba-section-label">Section 07</div>
+  <div class="ba-section-title">Tax <span>Invoice</span></div>
+  <p class="ba-section-intro">A GRA-compliant tax invoice in the Hisense Ghana identity. Every field is editable — click to change it. Add or remove line items and the amounts, subtotal, VAT and grand total recalculate automatically. Use Print / PDF to produce a finished invoice.</p>
+
+  <div class="stationery-wrap">
+    <div class="design-section">
+      <div class="design-section-header">
+        <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;"><span class="design-section-title">Tax Invoice — A4</span><span class="edit-hint">✏️ Click any field to edit</span></div>
+        <div class="design-section-actions">
+          <button class="btn btn-print" onclick="printEl('inv-hg')"><svg viewBox="0 0 24 24" style="width:13px;height:13px;fill:currentColor"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>Print / PDF</button>
+        </div>
+      </div>
+      <div class="stage">
+        <div class="inv-page" id="inv-hg">
+          <div class="inv-header">
+            <div class="inv-header-bar" style="background:linear-gradient(90deg,#017e84,#01b3ab,#2ecc71);"></div>
+            <div class="inv-header-top">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 50" width="180" height="30">
+                <text x="2" y="36" font-family="'Poppins',Arial,sans-serif" font-style="italic" font-weight="800" font-size="34" letter-spacing="-1" fill="#ffffff">Hisense Ghana</text>
+              </svg>
+              <div class="inv-header-right">
+                <div class="inv-title-badge">Tax Invoice</div>
+                <div class="inv-title-sub">Ghana Revenue Authority Compliant</div>
+              </div>
+            </div>
+            <div class="inv-meta-row">
+              <div class="inv-meta-item"><div class="inv-meta-label">Invoice No.</div><div class="inv-meta-value" contenteditable="true">INV-0001</div></div>
+              <div class="inv-meta-item"><div class="inv-meta-label">Invoice Date</div><div class="inv-meta-value" contenteditable="true">1 Jul 2026</div></div>
+              <div class="inv-meta-item"><div class="inv-meta-label">Due Date</div><div class="inv-meta-value" contenteditable="true">31 Jul 2026</div></div>
+              <div class="inv-meta-item"><div class="inv-meta-label">Currency</div><div class="inv-meta-value">GHS</div></div>
+            </div>
+          </div>
+
+          <div class="inv-body">
+            <div class="inv-parties">
+              <div class="inv-party">
+                <div class="inv-party-label">Supplier</div>
+                <p class="pname" contenteditable="true">Hisense Ghana Ltd</p>
+                <p contenteditable="true">123 Liberation Road</p>
+                <p contenteditable="true">Accra, Greater Accra, Ghana</p>
+                <p contenteditable="true">Tel: +233 30 000 0000</p>
+                <p contenteditable="true">Email: info@hisense.com.gh</p>
+                <p contenteditable="true">TIN: C000000000-0 &nbsp;·&nbsp; VAT: V0000000</p>
+              </div>
+              <div class="inv-party">
+                <div class="inv-party-label">Bill To</div>
+                <p class="pname" contenteditable="true">Customer Company Name</p>
+                <p contenteditable="true">Customer TIN: C00000000-0</p>
+                <p contenteditable="true">123 Customer Street</p>
+                <p contenteditable="true">Accra, Ghana</p>
+                <p contenteditable="true">Tel: +233 00 000 0000</p>
+                <p contenteditable="true">Email: billing@customer.com</p>
+              </div>
+            </div>
+
+            <div class="inv-table-actions">
+              <button class="btn-row btn-row-add" onclick="addRow('tbl-hg')">+ Add Row</button>
+            </div>
+            <table class="inv-table" id="tbl-hg">
+              <thead><tr>
+                <th style="width:28px;">#</th>
+                <th>Description</th>
+                <th style="width:56px;text-align:center;">Qty</th>
+                <th style="width:120px;text-align:right;">Unit Price (GHS)</th>
+                <th style="width:120px;text-align:right;">Amount (GHS)</th>
+                <th style="width:24px;"></th>
+              </tr></thead>
+              <tbody>
+                <tr><td class="td-center">1</td><td contenteditable="true">Hisense 55&quot; ULED Smart TV</td><td class="td-center" contenteditable="true" data-col="qty" oninput="calcRow(this);calcTotals('hg')">2</td><td class="td-num" contenteditable="true" data-col="price" oninput="calcRow(this);calcTotals('hg')">4500.00</td><td class="td-num" data-col="total">9000.00</td><td class="row-del" onclick="delRow(this)">×</td></tr>
+                <tr><td class="td-center">2</td><td contenteditable="true">Hisense 260L Double Door Refrigerator</td><td class="td-center" contenteditable="true" data-col="qty" oninput="calcRow(this);calcTotals('hg')">1</td><td class="td-num" contenteditable="true" data-col="price" oninput="calcRow(this);calcTotals('hg')">3200.00</td><td class="td-num" data-col="total">3200.00</td><td class="row-del" onclick="delRow(this)">×</td></tr>
+                <tr><td class="td-center">3</td><td contenteditable="true">Hisense 1.5HP Split Inverter AC</td><td class="td-center" contenteditable="true" data-col="qty" oninput="calcRow(this);calcTotals('hg')">3</td><td class="td-num" contenteditable="true" data-col="price" oninput="calcRow(this);calcTotals('hg')">2800.00</td><td class="td-num" data-col="total">8400.00</td><td class="row-del" onclick="delRow(this)">×</td></tr>
+              </tbody>
+            </table>
+
+            <div class="inv-totals">
+              <div class="inv-totals-box">
+                <div class="inv-totals-row subtotal"><span class="tlabel">Subtotal</span><span class="tval" id="sub-hg">GHS 0.00</span></div>
+                <div class="inv-totals-row vat"><span class="tlabel">VAT (<span contenteditable="true" id="vatrate-hg" oninput="calcTotals('hg')">15</span>%)</span><span class="tval" id="vat-hg">GHS 0.00</span></div>
+                <div class="inv-totals-row grand"><span class="tlabel">Grand Total</span><span class="tval" id="grand-hg">GHS 0.00</span></div>
+              </div>
+            </div>
+
+            <div class="inv-bottom-grid">
+              <div class="inv-payment">
+                <div class="inv-section-label">Payment Details</div>
+                <p><strong>Bank:</strong> <span contenteditable="true">Ecobank Ghana</span></p>
+                <p><strong>Account Name:</strong> <span contenteditable="true">Hisense Ghana Ltd</span></p>
+                <p><strong>Account No.:</strong> <span contenteditable="true">0000-0000-0000</span></p>
+                <p><strong>Branch:</strong> <span contenteditable="true">Accra Main</span></p>
+                <p><strong>Mobile Money:</strong> <span contenteditable="true">+233 24 000 0000</span></p>
+              </div>
+              <div class="inv-terms">
+                <div class="inv-terms-toggle" onclick="toggleTerms(this)">
+                  <div class="inv-section-label">Terms &amp; Conditions</div>
+                  <span class="inv-terms-arrow">▼</span>
+                </div>
+                <div class="inv-terms-body">
+                  <p contenteditable="true" style="white-space:pre-line;font-size:9.5px;line-height:1.7;">1. Payment is due within 30 days of the invoice date.
+2. Goods carry the standard Hisense manufacturer warranty.
+3. All prices are in Ghana Cedis (GHS).
+4. Goods remain the property of Hisense Ghana Ltd until full payment is received.
+5. Claims must be raised within 7 days of delivery.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="inv-sig">
+              <div class="inv-sig-box">
+                <div class="inv-sig-line"></div>
+                <div class="inv-sig-name" contenteditable="true">Ama Mensah</div>
+                <div class="inv-sig-title" contenteditable="true">Sales &amp; Marketing Manager, Hisense Ghana</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="inv-footer">
+            <p contenteditable="true">Hisense Ghana Ltd &nbsp;|&nbsp; TIN: C000000000-0 &nbsp;|&nbsp; VAT: V0000000 &nbsp;|&nbsp; Reg: CS-000000-20</p>
+            <div style="display:flex;align-items:center;gap:5px;"><div class="inv-footer-dot"></div><p contenteditable="true">www.hisense.com.gh</p></div>
+            <p style="color:#2ecc71;font-weight:600;">Page 1</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ba-divider"></div>
+
+<!-- ═══════════ SECTION 08 · DOWNLOADS ═══════════ -->
+<section class="ba-section" id="sec-downloads">
+  <div class="ba-section-label">Section 08</div>
   <div class="ba-section-title">Brand <span>Downloads</span></div>
   <p class="ba-section-intro">Grab the full set of vector assets in one click, or download individual files from the sections above. Recreated marks export as scalable SVG and high-resolution (4×) PNG; the official artwork is also available as supplied by Hisense Ghana.</p>
 </section>
@@ -926,7 +1118,52 @@ function triggerDownload(url,filename,revoke){
 }
 
 // ── Nav: active state + breadcrumb on scroll ──
-const NAV_NAMES={'sec-logo':'Master Logo','sec-lockups':'Product Lockups','sec-colour':'Colour System','sec-type':'Typography','sec-usage':'Logo Usage','sec-stationery':'Stationery','sec-downloads':'Downloads'};
+const NAV_NAMES={'sec-logo':'Master Logo','sec-lockups':'Product Lockups','sec-colour':'Colour System','sec-type':'Typography','sec-usage':'Logo Usage','sec-stationery':'Stationery','sec-invoice':'Tax Invoice','sec-downloads':'Downloads'};
+
+// ── Invoice: line items (qty × unit price) + auto totals ──
+function invRenumber(tbody){tbody.querySelectorAll('tr').forEach((r,i)=>{const c=r.querySelector('td:first-child');if(c)c.textContent=i+1;});}
+function num(el){return el?(parseFloat(el.textContent.replace(/[^0-9.]/g,''))||0):0;}
+function calcRow(cell){
+  const row=cell.closest('tr');
+  const q=row.querySelector('[data-col="qty"]'), p=row.querySelector('[data-col="price"]'), t=row.querySelector('[data-col="total"]');
+  if(q&&p&&t) t.textContent=(num(q)*num(p)).toFixed(2);
+  const tb=cell.closest('tbody'); if(tb) invRenumber(tb);
+}
+function calcTotals(divId){
+  const tbl=document.getElementById('tbl-'+divId); if(!tbl) return;
+  let sub=0;
+  tbl.querySelectorAll('tbody tr').forEach(row=>{
+    const c=row.querySelector('td.td-num[data-col="total"]')||row.querySelector('td.td-num[data-col="fee"]');
+    if(c) sub+=num(c);
+  });
+  const rateEl=document.getElementById('vatrate-'+divId);
+  const rate=rateEl?num(rateEl):15;
+  const vat=sub*rate/100, grand=sub+vat;
+  const fmt=v=>'GHS '+v.toLocaleString('en-GH',{minimumFractionDigits:2,maximumFractionDigits:2});
+  const se=document.getElementById('sub-'+divId); if(se) se.textContent=fmt(sub);
+  const ve=document.getElementById('vat-'+divId); if(ve) ve.textContent=fmt(vat);
+  const ge=document.getElementById('grand-'+divId); if(ge) ge.textContent=fmt(grand);
+}
+function addRow(tblId){
+  const tbl=document.getElementById(tblId); if(!tbl) return;
+  const tbody=tbl.querySelector('tbody'); const n=tbody.rows.length+1; const divId=tblId.replace('tbl-','');
+  const tr=document.createElement('tr');
+  tr.innerHTML='<td class="td-center">'+n+'</td><td contenteditable="true"></td>'+
+    '<td class="td-center" contenteditable="true" data-col="qty" oninput="calcRow(this);calcTotals(\''+divId+'\')">1</td>'+
+    '<td class="td-num" contenteditable="true" data-col="price" oninput="calcRow(this);calcTotals(\''+divId+'\')">0.00</td>'+
+    '<td class="td-num" data-col="total">0.00</td><td class="row-del" onclick="delRow(this)">×</td>';
+  tbody.appendChild(tr);
+}
+function delRow(btn){
+  const row=btn.closest('tr'), tbl=btn.closest('table'), divId=tbl.id.replace('tbl-','');
+  row.remove(); invRenumber(tbl.querySelector('tbody')); calcTotals(divId);
+}
+function toggleTerms(btn){
+  const body=btn.parentElement.querySelector('.inv-terms-body')||btn.nextElementSibling;
+  const arrow=btn.querySelector('.inv-terms-arrow');
+  if(body){body.classList.toggle('collapsed'); if(arrow) arrow.classList.toggle('collapsed');}
+}
+document.addEventListener('DOMContentLoaded',()=>calcTotals('hg'));
 
 // ── Print a single stationery piece ──
 function printEl(id){
